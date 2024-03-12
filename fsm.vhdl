@@ -65,7 +65,7 @@ begin
     -- computing next state circuit here 
     -- note that the circuit state changes with the button rising edge, not button=1
     -- this is done for stability
-    state_machine: process(state_t0, btn_d)
+    state_machine: process(state_t0, btn_d, clk)
     begin
         case state_t0 is
             when zero  => if btn_d_re = '1' then state_t1 <= one; else state_t1 <= zero; end if;
