@@ -2,6 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity fsm_tb is
+--  Port ( );
 end fsm_tb;
 
 architecture Behavioral of fsm_tb is
@@ -68,15 +69,15 @@ begin
         wait for 1 ms;
         btnC_tb(0) <= '1'; -- state from "two" to "three" 
         wait for 1 ms;
-        btnC_tb(0) <= '0'; -- state from "three" to "zero"
+        btnC_tb(0) <= '0'; 
         wait for 1 ms;
-        btnC_tb(0) <= '1'; -- state from "zero" to "one"
+        btnC_tb(0) <= '1'; -- state from "three" to "zero"
         wait for 1 ms;
         btnC_tb(0) <= '0';
         wait for 1 ms;
 
         -- now long press test
-        btnC_tb(0) <= '1'; -- state from "one" to "two"
+        btnC_tb(0) <= '1'; -- state from "zero" to "one"
         wait for 10 ms;
         btnC_tb(0) <= '0';        
         wait;
